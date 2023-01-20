@@ -1,0 +1,1506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ecomSchoolModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Caste">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Caste" Type="nvarchar(max)" />
+          <Property Name="description" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+          <Property Name="Code" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Cities">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="City" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+          <Property Name="Country" Type="nvarchar(max)" />
+          <Property Name="State" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Countries">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="Country" Type="nvarchar(max)" />
+          <Property Name="isocode" Type="nvarchar(max)" />
+          <Property Name="DialCode" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+        </EntityType>
+        <EntityType Name="Entity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="EntityName" Type="nvarchar(max)" />
+          <Property Name="EntityDate" Type="date" />
+          <Property Name="EntityType" Type="nvarchar(max)" />
+          <Property Name="ownerName" Type="nvarchar(max)" />
+          <Property Name="contsctno" Type="nvarchar" MaxLength="13" />
+          <Property Name="email" Type="nvarchar(max)" />
+          <Property Name="address" Type="nvarchar(max)" />
+          <Property Name="clientid" Type="int" />
+        </EntityType>
+        <EntityType Name="entity_Type">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="Type" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="clientid" Type="int" />
+        </EntityType>
+        <EntityType Name="fr_CaseGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="CaseGroup" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+          <Property Name="clientId" Type="int" />
+        </EntityType>
+        <EntityType Name="fr_CASERULES">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="CaseGroup" Type="nvarchar(max)" />
+          <Property Name="CaseType" Type="nvarchar(max)" />
+          <Property Name="CaseRule" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="AssignTo" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+          <Property Name="clientId" Type="int" />
+        </EntityType>
+        <EntityType Name="fr_casestage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="varchar(max)" />
+          <Property Name="Caseuser" Type="varchar(max)" />
+          <Property Name="Stagetype" Type="varchar(max)" />
+          <Property Name="Stages" Type="varchar(max)" />
+          <Property Name="description" Type="varchar(max)" />
+          <Property Name="entityId" Type="int" />
+          <Property Name="clientID" Type="int" />
+        </EntityType>
+        <EntityType Name="fr_CaseType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="CaseGroup" Type="nvarchar(max)" />
+          <Property Name="CaseType" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+          <Property Name="clientId" Type="int" />
+          <Property Name="CaseFor" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="fr_certificateType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="CertificateFor" Type="nvarchar(max)" />
+          <Property Name="CertificateType" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+          <Property Name="clientId" Type="int" />
+        </EntityType>
+        <EntityType Name="fr_Purpose">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="Purpose" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+          <Property Name="clientId" Type="int" />
+        </EntityType>
+        <EntityType Name="fr_Source">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="Source" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+          <Property Name="clientId" Type="int" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_Book">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="bookno" Type="nvarchar(max)" />
+          <Property Name="course" Type="nvarchar(max)" />
+          <Property Name="Subject" Type="nvarchar(max)" />
+          <Property Name="subtype" Type="nvarchar(max)" />
+          <Property Name="bookname" Type="nvarchar(max)" />
+          <Property Name="tag" Type="nvarchar(max)" />
+          <Property Name="author" Type="nvarchar(max)" />
+          <Property Name="publisher" Type="nvarchar(max)" />
+          <Property Name="barcode" Type="nvarchar(max)" />
+          <Property Name="price" Type="nvarchar(max)" />
+          <Property Name="edition" Type="nvarchar(max)" />
+          <Property Name="year" Type="nvarchar(max)" />
+          <Property Name="seriesname" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+          <Property Name="clientId" Type="int" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_bookAuthor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="AuthorType" Type="nvarchar(max)" />
+          <Property Name="NickName" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Country" Type="nvarchar(max)" />
+          <Property Name="YearBorn" Type="nvarchar(max)" />
+          <Property Name="YearDied" Type="nvarchar(max)" />
+          <Property Name="Awards" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_bookCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="BookCategory" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_bookPublisher">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="Publisher" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Country" Type="nvarchar(max)" />
+          <Property Name="PhoneNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="WebUrl" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_bookType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="BookType" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_Course">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="CourseCategory" Type="nvarchar(max)" />
+          <Property Name="Course" Type="nvarchar(max)" />
+          <Property Name="Syllabus" Type="nvarchar(max)" />
+          <Property Name="AgeFrom" Type="int" />
+          <Property Name="AgeTill" Type="int" />
+          <Property Name="entityId" Type="int" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_Section">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="Section" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_Section_group">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="SectionGroup" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+          <Property Name="Sections" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="hdr_AC_Subject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="entityId" Type="int" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="SubjectType" Type="nvarchar(max)" />
+          <Property Name="Course" Type="nvarchar(max)" />
+          <Property Name="Language" Type="nvarchar(max)" />
+          <Property Name="PeriodsPerWeek" Type="nvarchar" MaxLength="5" />
+          <Property Name="SubjectName" Type="nvarchar(max)" />
+          <Property Name="SubjectCategory" Type="nvarchar(max)" />
+          <Property Name="SubjectClass" Type="nvarchar(max)" />
+          <Property Name="Compulsory" Type="nvarchar" MaxLength="10" />
+          <Property Name="Syllabus" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_subjectType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="SubjectType" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_Syllabus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="Syllabus" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+        </EntityType>
+        <EntityType Name="hdr_HR_EmployeeProfile">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="empid" Type="int" />
+          <Property Name="shrotcode" Type="nvarchar" MaxLength="25" />
+          <Property Name="machinecode" Type="nvarchar" MaxLength="25" />
+          <Property Name="joindate" Type="nvarchar(max)" />
+          <Property Name="firstname" Type="nvarchar(max)" />
+          <Property Name="lastname" Type="nvarchar(max)" />
+          <Property Name="dateofbirth" Type="nvarchar(max)" />
+          <Property Name="Gender" Type="nvarchar(max)" />
+          <Property Name="bloodgroup" Type="nvarchar(max)" />
+          <Property Name="CNIC" Type="nvarchar(max)" />
+          <Property Name="birthcountry" Type="nvarchar(max)" />
+          <Property Name="birthcity" Type="nvarchar(max)" />
+          <Property Name="nationality" Type="nvarchar(max)" />
+          <Property Name="religion" Type="nvarchar(max)" />
+          <Property Name="email" Type="nvarchar(max)" />
+          <Property Name="contactno" Type="nvarchar(max)" />
+          <Property Name="whatsappno" Type="nvarchar(max)" />
+          <Property Name="emptype" Type="nvarchar(max)" />
+          <Property Name="empcategory" Type="nvarchar(max)" />
+          <Property Name="empdepartment" Type="nvarchar(max)" />
+          <Property Name="empdestination" Type="nvarchar(max)" />
+          <Property Name="site" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+          <Property Name="clientId" Type="int" />
+        </EntityType>
+        <EntityType Name="hdr_Sm_studentinfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentID" Type="nvarchar" MaxLength="10" />
+          <Property Name="grno" Type="nvarchar(max)" />
+          <Property Name="StudentCategory" Type="nvarchar(max)" />
+          <Property Name="FullName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="DateofBirth" Type="date" />
+          <Property Name="CNIC" Type="nvarchar(max)" />
+          <Property Name="Nationality" Type="nvarchar(max)" />
+          <Property Name="gender" Type="nvarchar" MaxLength="8" />
+          <Property Name="Religon" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Country" Type="nvarchar(max)" />
+          <Property Name="State" Type="nvarchar(max)" />
+          <Property Name="City" Type="nvarchar(max)" />
+          <Property Name="Phoneno" Type="nvarchar" MaxLength="13" />
+          <Property Name="mobileno" Type="nvarchar" MaxLength="13" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="joingdate" Type="date" />
+          <Property Name="admissiondate" Type="date" />
+          <Property Name="syllabus" Type="nvarchar(max)" />
+          <Property Name="Course" Type="nvarchar(max)" />
+          <Property Name="Section" Type="nvarchar(max)" />
+          <Property Name="Sectiongroup" Type="nvarchar(max)" />
+          <Property Name="fatherName" Type="nvarchar(max)" />
+          <Property Name="fatherincome" Type="nvarchar(max)" />
+          <Property Name="Contactno" Type="nvarchar" MaxLength="13" />
+          <Property Name="fathercnic" Type="nvarchar(max)" />
+          <Property Name="whatsappno" Type="nvarchar(max)" />
+          <Property Name="fatheremail" Type="nvarchar(max)" />
+          <Property Name="fatheraddress" Type="nvarchar(max)" />
+          <Property Name="fathercountry" Type="nvarchar(max)" />
+          <Property Name="fatherstate" Type="nvarchar(max)" />
+          <Property Name="fathercity" Type="nvarchar(max)" />
+          <Property Name="mothername" Type="nvarchar(max)" />
+          <Property Name="mothercnic" Type="nvarchar(max)" />
+          <Property Name="mothercontactno" Type="nvarchar" MaxLength="13" />
+          <Property Name="motherwhatsapp" Type="nvarchar(max)" />
+          <Property Name="motheremail" Type="nvarchar(max)" />
+          <Property Name="motheraddres" Type="nvarchar(max)" />
+          <Property Name="mothercountry" Type="nvarchar(max)" />
+          <Property Name="motherstate" Type="nvarchar(max)" />
+          <Property Name="mothercity" Type="nvarchar(max)" />
+          <Property Name="emergencyrelagion" Type="nvarchar(max)" />
+          <Property Name="emergencypersonname" Type="nvarchar(max)" />
+          <Property Name="emergencycnic" Type="nvarchar(max)" />
+          <Property Name="emergencycontactno" Type="nvarchar" MaxLength="13" />
+          <Property Name="entityId" Type="int" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="Role" Type="nvarchar(max)" />
+          <Property Name="client" Type="int" />
+          <Property Name="entityId" Type="int" />
+        </EntityType>
+        <EntityType Name="Sms_Qualification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="qualificationtypeid" Type="nvarchar(max)" />
+          <Property Name="qualification" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="entityid" Type="int" />
+        </EntityType>
+        <EntityType Name="SMS_QualificationType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="QualificationType" Type="nvarchar(max)" />
+          <Property Name="Dexcription" Type="nvarchar(max)" />
+          <Property Name="entityid" Type="int" />
+        </EntityType>
+        <EntityType Name="sms_Religion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="Religion" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="entityid" Type="int" />
+        </EntityType>
+        <EntityType Name="States">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="State" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+          <Property Name="Country" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="student_category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="studentcategory" Type="nvarchar(max)" />
+          <Property Name="description" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+        </EntityType>
+        <EntityType Name="ut_clients">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="client" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ut_user_auth">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Entity" Type="nvarchar(max)" />
+          <Property Name="Username" Type="nvarchar(max)" />
+          <Property Name="Password" Type="nvarchar(max)" />
+          <Property Name="Fullname" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="CellNo" Type="nvarchar(max)" />
+          <Property Name="UserCategory" Type="nvarchar(max)" />
+          <Property Name="Role" Type="nvarchar(max)" />
+          <Property Name="Status" Type="nvarchar(max)" />
+          <Property Name="entityId" Type="int" />
+          <Property Name="clientid" Type="int" />
+          <Property Name="entitiesname" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="ecomSchoolModelStoreContainer">
+          <EntitySet Name="Caste" EntityType="Self.Caste" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cities" EntityType="Self.Cities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Countries" EntityType="Self.Countries" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Entity" EntityType="Self.Entity" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="entity_Type" EntityType="Self.entity_Type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fr_CaseGroup" EntityType="Self.fr_CaseGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fr_CASERULES" EntityType="Self.fr_CASERULES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fr_casestage" EntityType="Self.fr_casestage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fr_CaseType" EntityType="Self.fr_CaseType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fr_certificateType" EntityType="Self.fr_certificateType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fr_Purpose" EntityType="Self.fr_Purpose" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fr_Source" EntityType="Self.fr_Source" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hdr_Ac_Book" EntityType="Self.hdr_Ac_Book" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hdr_Ac_bookAuthor" EntityType="Self.hdr_Ac_bookAuthor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hdr_Ac_bookCategory" EntityType="Self.hdr_Ac_bookCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hdr_Ac_bookPublisher" EntityType="Self.hdr_Ac_bookPublisher" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hdr_Ac_bookType" EntityType="Self.hdr_Ac_bookType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hdr_Ac_Course" EntityType="Self.hdr_Ac_Course" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hdr_Ac_Section" EntityType="Self.hdr_Ac_Section" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hdr_Ac_Section_group" EntityType="Self.hdr_Ac_Section_group" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hdr_AC_Subject" EntityType="Self.hdr_AC_Subject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hdr_Ac_subjectType" EntityType="Self.hdr_Ac_subjectType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hdr_Ac_Syllabus" EntityType="Self.hdr_Ac_Syllabus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hdr_HR_EmployeeProfile" EntityType="Self.hdr_HR_EmployeeProfile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hdr_Sm_studentinfo" EntityType="Self.hdr_Sm_studentinfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sms_Qualification" EntityType="Self.Sms_Qualification" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SMS_QualificationType" EntityType="Self.SMS_QualificationType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sms_Religion" EntityType="Self.sms_Religion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="States" EntityType="Self.States" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="student_category" EntityType="Self.student_category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ut_clients" EntityType="Self.ut_clients" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ut_user_auth" EntityType="Self.ut_user_auth" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ecomSchoolModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ecomSchoolEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Castes" EntityType="ecomSchoolModel.Caste" />
+          <EntitySet Name="Cities" EntityType="ecomSchoolModel.City" />
+          <EntitySet Name="Countries" EntityType="ecomSchoolModel.Country" />
+          <EntitySet Name="Entities" EntityType="ecomSchoolModel.Entity" />
+          <EntitySet Name="entity_Type" EntityType="ecomSchoolModel.entity_Type" />
+          <EntitySet Name="hdr_Ac_bookAuthor" EntityType="ecomSchoolModel.hdr_Ac_bookAuthor" />
+          <EntitySet Name="hdr_Ac_bookCategory" EntityType="ecomSchoolModel.hdr_Ac_bookCategory" />
+          <EntitySet Name="hdr_Ac_bookPublisher" EntityType="ecomSchoolModel.hdr_Ac_bookPublisher" />
+          <EntitySet Name="hdr_Ac_bookType" EntityType="ecomSchoolModel.hdr_Ac_bookType" />
+          <EntitySet Name="hdr_Ac_Course" EntityType="ecomSchoolModel.hdr_Ac_Course" />
+          <EntitySet Name="hdr_Ac_Section" EntityType="ecomSchoolModel.hdr_Ac_Section" />
+          <EntitySet Name="hdr_Ac_Section_group" EntityType="ecomSchoolModel.hdr_Ac_Section_group" />
+          <EntitySet Name="hdr_AC_Subject" EntityType="ecomSchoolModel.hdr_AC_Subject" />
+          <EntitySet Name="hdr_Ac_subjectType" EntityType="ecomSchoolModel.hdr_Ac_subjectType" />
+          <EntitySet Name="hdr_Ac_Syllabus" EntityType="ecomSchoolModel.hdr_Ac_Syllabus" />
+          <EntitySet Name="hdr_Sm_studentinfo" EntityType="ecomSchoolModel.hdr_Sm_studentinfo" />
+          <EntitySet Name="Roles" EntityType="ecomSchoolModel.Role" />
+          <EntitySet Name="SMS_QualificationType" EntityType="ecomSchoolModel.SMS_QualificationType" />
+          <EntitySet Name="sms_Religion" EntityType="ecomSchoolModel.sms_Religion" />
+          <EntitySet Name="States" EntityType="ecomSchoolModel.State" />
+          <EntitySet Name="student_category" EntityType="ecomSchoolModel.student_category" />
+          <EntitySet Name="ut_clients" EntityType="ecomSchoolModel.ut_clients" />
+          <EntitySet Name="ut_user_auth" EntityType="ecomSchoolModel.ut_user_auth" />
+          <EntitySet Name="Sms_Qualification" EntityType="ecomSchoolModel.Sms_Qualification" />
+          <EntitySet Name="hdr_HR_EmployeeProfile" EntityType="ecomSchoolModel.hdr_HR_EmployeeProfile" />
+          <EntitySet Name="fr_CaseGroup" EntityType="ecomSchoolModel.fr_CaseGroup" />
+          <EntitySet Name="fr_CaseType" EntityType="ecomSchoolModel.fr_CaseType" />
+          <EntitySet Name="fr_Purpose" EntityType="ecomSchoolModel.fr_Purpose" />
+          <EntitySet Name="fr_Source" EntityType="ecomSchoolModel.fr_Source" />
+          <EntitySet Name="fr_CASERULES" EntityType="ecomSchoolModel.fr_CASERULES" />
+          <EntitySet Name="fr_certificateType" EntityType="ecomSchoolModel.fr_certificateType" />
+          <EntitySet Name="fr_casestage" EntityType="ecomSchoolModel.fr_casestage" />
+          <EntitySet Name="hdr_Ac_Book" EntityType="ecomSchoolModel.hdr_Ac_Book" />
+        </EntityContainer>
+        <EntityType Name="Caste">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Caste1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="City1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+          <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Country1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="isocode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DialCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Entity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EntityName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EntityDate" Type="DateTime" Precision="0" />
+          <Property Name="EntityType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ownerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="contsctno" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="clientid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="entity_Type">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="clientid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_bookAuthor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AuthorType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NickName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YearBorn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YearDied" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Awards" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_bookCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BookCategory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_bookPublisher">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Publisher" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WebUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_bookType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BookType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_Course">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CourseCategory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Course" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Syllabus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AgeFrom" Type="Int32" />
+          <Property Name="AgeTill" Type="Int32" />
+          <Property Name="entityId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_Section">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Section" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_Section_group">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SectionGroup" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+          <Property Name="Sections" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="hdr_AC_Subject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="entityId" Type="Int32" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SubjectType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Course" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PeriodsPerWeek" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="SubjectName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SubjectCategory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SubjectClass" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Compulsory" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Syllabus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_subjectType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SubjectType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_Syllabus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Syllabus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="hdr_Sm_studentinfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="grno" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StudentCategory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateofBirth" Type="DateTime" Precision="0" />
+          <Property Name="CNIC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Nationality" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="gender" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="Religon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phoneno" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="mobileno" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="joingdate" Type="DateTime" Precision="0" />
+          <Property Name="admissiondate" Type="DateTime" Precision="0" />
+          <Property Name="syllabus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Course" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Section" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sectiongroup" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="fatherName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="fatherincome" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Contactno" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="fathercnic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="whatsappno" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="fatheremail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="fatheraddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="fathercountry" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="fatherstate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="fathercity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mothername" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mothercnic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mothercontactno" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="motherwhatsapp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="motheremail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="motheraddres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mothercountry" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="motherstate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mothercity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="emergencyrelagion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="emergencypersonname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="emergencycnic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="emergencycontactno" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Role1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="client" Type="Int32" />
+          <Property Name="entityId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SMS_QualificationType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="QualificationType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Dexcription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="sms_Religion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Religion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="State1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+          <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="student_category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="studentcategory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ut_clients">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="client" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ut_user_auth">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Entity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Fullname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CellNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserCategory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Role" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+          <Property Name="clientid" Type="Int32" />
+          <Property Name="entitiesname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Sms_Qualification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="qualificationtypeid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="qualification" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="hdr_HR_EmployeeProfile">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="empid" Type="Int32" />
+          <Property Name="shrotcode" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="machinecode" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="joindate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="firstname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="lastname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dateofbirth" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="bloodgroup" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CNIC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="birthcountry" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="birthcity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="nationality" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="religion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="contactno" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="whatsappno" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="emptype" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="empcategory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="empdepartment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="empdestination" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="site" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+          <Property Name="clientId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="fr_CaseGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CaseGroup" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+          <Property Name="clientId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="fr_CaseType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CaseGroup" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CaseType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+          <Property Name="clientId" Type="Int32" />
+          <Property Name="CaseFor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="fr_Purpose">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Purpose" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+          <Property Name="clientId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="fr_Source">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Source" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+          <Property Name="clientId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="fr_CASERULES">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CaseGroup" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CaseType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CaseRule" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AssignTo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+          <Property Name="clientId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="fr_certificateType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CertificateFor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CertificateType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+          <Property Name="clientId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="fr_casestage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Caseuser" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Stagetype" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Stages" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="entityId" Type="Int32" />
+          <Property Name="clientID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="hdr_Ac_Book">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bookno" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="course" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Subject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="subtype" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="bookname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="author" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="publisher" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="barcode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="edition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="year" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="seriesname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entityId" Type="Int32" />
+          <Property Name="clientId" Type="Int32" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ecomSchoolModelStoreContainer" CdmEntityContainer="ecomSchoolEntities">
+          <EntitySetMapping Name="Castes">
+            <EntityTypeMapping TypeName="ecomSchoolModel.Caste">
+              <MappingFragment StoreEntitySet="Caste">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="Caste1" ColumnName="Caste" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="ecomSchoolModel.City">
+              <MappingFragment StoreEntitySet="Cities">
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="City1" ColumnName="City" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="ecomSchoolModel.Country">
+              <MappingFragment StoreEntitySet="Countries">
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DialCode" ColumnName="DialCode" />
+                <ScalarProperty Name="isocode" ColumnName="isocode" />
+                <ScalarProperty Name="Country1" ColumnName="Country" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Entities">
+            <EntityTypeMapping TypeName="ecomSchoolModel.Entity">
+              <MappingFragment StoreEntitySet="Entity">
+                <ScalarProperty Name="clientid" ColumnName="clientid" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="contsctno" ColumnName="contsctno" />
+                <ScalarProperty Name="ownerName" ColumnName="ownerName" />
+                <ScalarProperty Name="EntityType" ColumnName="EntityType" />
+                <ScalarProperty Name="EntityDate" ColumnName="EntityDate" />
+                <ScalarProperty Name="EntityName" ColumnName="EntityName" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="entity_Type">
+            <EntityTypeMapping TypeName="ecomSchoolModel.entity_Type">
+              <MappingFragment StoreEntitySet="entity_Type">
+                <ScalarProperty Name="clientid" ColumnName="clientid" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hdr_Ac_bookAuthor">
+            <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_bookAuthor">
+              <MappingFragment StoreEntitySet="hdr_Ac_bookAuthor">
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="Awards" ColumnName="Awards" />
+                <ScalarProperty Name="YearDied" ColumnName="YearDied" />
+                <ScalarProperty Name="YearBorn" ColumnName="YearBorn" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="NickName" ColumnName="NickName" />
+                <ScalarProperty Name="AuthorType" ColumnName="AuthorType" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hdr_Ac_bookCategory">
+            <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_bookCategory">
+              <MappingFragment StoreEntitySet="hdr_Ac_bookCategory">
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="BookCategory" ColumnName="BookCategory" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hdr_Ac_bookPublisher">
+            <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_bookPublisher">
+              <MappingFragment StoreEntitySet="hdr_Ac_bookPublisher">
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="WebUrl" ColumnName="WebUrl" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Publisher" ColumnName="Publisher" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hdr_Ac_bookType">
+            <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_bookType">
+              <MappingFragment StoreEntitySet="hdr_Ac_bookType">
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="BookType" ColumnName="BookType" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hdr_Ac_Course">
+            <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_Course">
+              <MappingFragment StoreEntitySet="hdr_Ac_Course">
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="AgeTill" ColumnName="AgeTill" />
+                <ScalarProperty Name="AgeFrom" ColumnName="AgeFrom" />
+                <ScalarProperty Name="Syllabus" ColumnName="Syllabus" />
+                <ScalarProperty Name="Course" ColumnName="Course" />
+                <ScalarProperty Name="CourseCategory" ColumnName="CourseCategory" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hdr_Ac_Section">
+            <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_Section">
+              <MappingFragment StoreEntitySet="hdr_Ac_Section">
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Section" ColumnName="Section" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hdr_Ac_Section_group">
+            <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_Section_group">
+              <MappingFragment StoreEntitySet="hdr_Ac_Section_group">
+                <ScalarProperty Name="Sections" ColumnName="Sections" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SectionGroup" ColumnName="SectionGroup" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hdr_AC_Subject">
+            <EntityTypeMapping TypeName="ecomSchoolModel.hdr_AC_Subject">
+              <MappingFragment StoreEntitySet="hdr_AC_Subject">
+                <ScalarProperty Name="Syllabus" ColumnName="Syllabus" />
+                <ScalarProperty Name="Compulsory" ColumnName="Compulsory" />
+                <ScalarProperty Name="SubjectClass" ColumnName="SubjectClass" />
+                <ScalarProperty Name="SubjectCategory" ColumnName="SubjectCategory" />
+                <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+                <ScalarProperty Name="PeriodsPerWeek" ColumnName="PeriodsPerWeek" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="Course" ColumnName="Course" />
+                <ScalarProperty Name="SubjectType" ColumnName="SubjectType" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hdr_Ac_subjectType">
+            <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_subjectType">
+              <MappingFragment StoreEntitySet="hdr_Ac_subjectType">
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SubjectType" ColumnName="SubjectType" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hdr_Ac_Syllabus">
+            <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_Syllabus">
+              <MappingFragment StoreEntitySet="hdr_Ac_Syllabus">
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Syllabus" ColumnName="Syllabus" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hdr_Sm_studentinfo">
+            <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Sm_studentinfo">
+              <MappingFragment StoreEntitySet="hdr_Sm_studentinfo">
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="emergencycontactno" ColumnName="emergencycontactno" />
+                <ScalarProperty Name="emergencycnic" ColumnName="emergencycnic" />
+                <ScalarProperty Name="emergencypersonname" ColumnName="emergencypersonname" />
+                <ScalarProperty Name="emergencyrelagion" ColumnName="emergencyrelagion" />
+                <ScalarProperty Name="mothercity" ColumnName="mothercity" />
+                <ScalarProperty Name="motherstate" ColumnName="motherstate" />
+                <ScalarProperty Name="mothercountry" ColumnName="mothercountry" />
+                <ScalarProperty Name="motheraddres" ColumnName="motheraddres" />
+                <ScalarProperty Name="motheremail" ColumnName="motheremail" />
+                <ScalarProperty Name="motherwhatsapp" ColumnName="motherwhatsapp" />
+                <ScalarProperty Name="mothercontactno" ColumnName="mothercontactno" />
+                <ScalarProperty Name="mothercnic" ColumnName="mothercnic" />
+                <ScalarProperty Name="mothername" ColumnName="mothername" />
+                <ScalarProperty Name="fathercity" ColumnName="fathercity" />
+                <ScalarProperty Name="fatherstate" ColumnName="fatherstate" />
+                <ScalarProperty Name="fathercountry" ColumnName="fathercountry" />
+                <ScalarProperty Name="fatheraddress" ColumnName="fatheraddress" />
+                <ScalarProperty Name="fatheremail" ColumnName="fatheremail" />
+                <ScalarProperty Name="whatsappno" ColumnName="whatsappno" />
+                <ScalarProperty Name="fathercnic" ColumnName="fathercnic" />
+                <ScalarProperty Name="Contactno" ColumnName="Contactno" />
+                <ScalarProperty Name="fatherincome" ColumnName="fatherincome" />
+                <ScalarProperty Name="fatherName" ColumnName="fatherName" />
+                <ScalarProperty Name="Sectiongroup" ColumnName="Sectiongroup" />
+                <ScalarProperty Name="Section" ColumnName="Section" />
+                <ScalarProperty Name="Course" ColumnName="Course" />
+                <ScalarProperty Name="syllabus" ColumnName="syllabus" />
+                <ScalarProperty Name="admissiondate" ColumnName="admissiondate" />
+                <ScalarProperty Name="joingdate" ColumnName="joingdate" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+                <ScalarProperty Name="Phoneno" ColumnName="Phoneno" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Religon" ColumnName="Religon" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="CNIC" ColumnName="CNIC" />
+                <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="StudentCategory" ColumnName="StudentCategory" />
+                <ScalarProperty Name="grno" ColumnName="grno" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="ecomSchoolModel.Role">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="client" ColumnName="client" />
+                <ScalarProperty Name="Role1" ColumnName="Role" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SMS_QualificationType">
+            <EntityTypeMapping TypeName="ecomSchoolModel.SMS_QualificationType">
+              <MappingFragment StoreEntitySet="SMS_QualificationType">
+                <ScalarProperty Name="entityid" ColumnName="entityid" />
+                <ScalarProperty Name="Dexcription" ColumnName="Dexcription" />
+                <ScalarProperty Name="QualificationType" ColumnName="QualificationType" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sms_Religion">
+            <EntityTypeMapping TypeName="ecomSchoolModel.sms_Religion">
+              <MappingFragment StoreEntitySet="sms_Religion">
+                <ScalarProperty Name="entityid" ColumnName="entityid" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Religion" ColumnName="Religion" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="States">
+            <EntityTypeMapping TypeName="ecomSchoolModel.State">
+              <MappingFragment StoreEntitySet="States">
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="State1" ColumnName="State" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="student_category">
+            <EntityTypeMapping TypeName="ecomSchoolModel.student_category">
+              <MappingFragment StoreEntitySet="student_category">
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="studentcategory" ColumnName="studentcategory" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ut_clients">
+            <EntityTypeMapping TypeName="ecomSchoolModel.ut_clients">
+              <MappingFragment StoreEntitySet="ut_clients">
+                <ScalarProperty Name="client" ColumnName="client" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ut_user_auth">
+            <EntityTypeMapping TypeName="ecomSchoolModel.ut_user_auth">
+              <MappingFragment StoreEntitySet="ut_user_auth">
+                <ScalarProperty Name="entitiesname" ColumnName="entitiesname" />
+                <ScalarProperty Name="clientid" ColumnName="clientid" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="UserCategory" ColumnName="UserCategory" />
+                <ScalarProperty Name="CellNo" ColumnName="CellNo" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Entity" ColumnName="Entity" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sms_Qualification">
+            <EntityTypeMapping TypeName="ecomSchoolModel.Sms_Qualification">
+              <MappingFragment StoreEntitySet="Sms_Qualification">
+                <ScalarProperty Name="entityid" ColumnName="entityid" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="qualification" ColumnName="qualification" />
+                <ScalarProperty Name="qualificationtypeid" ColumnName="qualificationtypeid" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hdr_HR_EmployeeProfile">
+            <EntityTypeMapping TypeName="ecomSchoolModel.hdr_HR_EmployeeProfile">
+              <MappingFragment StoreEntitySet="hdr_HR_EmployeeProfile">
+                <ScalarProperty Name="clientId" ColumnName="clientId" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="site" ColumnName="site" />
+                <ScalarProperty Name="empdestination" ColumnName="empdestination" />
+                <ScalarProperty Name="empdepartment" ColumnName="empdepartment" />
+                <ScalarProperty Name="empcategory" ColumnName="empcategory" />
+                <ScalarProperty Name="emptype" ColumnName="emptype" />
+                <ScalarProperty Name="whatsappno" ColumnName="whatsappno" />
+                <ScalarProperty Name="contactno" ColumnName="contactno" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="religion" ColumnName="religion" />
+                <ScalarProperty Name="nationality" ColumnName="nationality" />
+                <ScalarProperty Name="birthcity" ColumnName="birthcity" />
+                <ScalarProperty Name="birthcountry" ColumnName="birthcountry" />
+                <ScalarProperty Name="CNIC" ColumnName="CNIC" />
+                <ScalarProperty Name="bloodgroup" ColumnName="bloodgroup" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="dateofbirth" ColumnName="dateofbirth" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="joindate" ColumnName="joindate" />
+                <ScalarProperty Name="machinecode" ColumnName="machinecode" />
+                <ScalarProperty Name="shrotcode" ColumnName="shrotcode" />
+                <ScalarProperty Name="empid" ColumnName="empid" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fr_CaseGroup">
+            <EntityTypeMapping TypeName="ecomSchoolModel.fr_CaseGroup">
+              <MappingFragment StoreEntitySet="fr_CaseGroup">
+                <ScalarProperty Name="clientId" ColumnName="clientId" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CaseGroup" ColumnName="CaseGroup" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fr_CaseType">
+            <EntityTypeMapping TypeName="ecomSchoolModel.fr_CaseType">
+              <MappingFragment StoreEntitySet="fr_CaseType">
+                <ScalarProperty Name="CaseFor" ColumnName="CaseFor" />
+                <ScalarProperty Name="clientId" ColumnName="clientId" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CaseType" ColumnName="CaseType" />
+                <ScalarProperty Name="CaseGroup" ColumnName="CaseGroup" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fr_Purpose">
+            <EntityTypeMapping TypeName="ecomSchoolModel.fr_Purpose">
+              <MappingFragment StoreEntitySet="fr_Purpose">
+                <ScalarProperty Name="clientId" ColumnName="clientId" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fr_Source">
+            <EntityTypeMapping TypeName="ecomSchoolModel.fr_Source">
+              <MappingFragment StoreEntitySet="fr_Source">
+                <ScalarProperty Name="clientId" ColumnName="clientId" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fr_CASERULES">
+            <EntityTypeMapping TypeName="ecomSchoolModel.fr_CASERULES">
+              <MappingFragment StoreEntitySet="fr_CASERULES">
+                <ScalarProperty Name="clientId" ColumnName="clientId" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="AssignTo" ColumnName="AssignTo" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CaseRule" ColumnName="CaseRule" />
+                <ScalarProperty Name="CaseType" ColumnName="CaseType" />
+                <ScalarProperty Name="CaseGroup" ColumnName="CaseGroup" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fr_certificateType">
+            <EntityTypeMapping TypeName="ecomSchoolModel.fr_certificateType">
+              <MappingFragment StoreEntitySet="fr_certificateType">
+                <ScalarProperty Name="clientId" ColumnName="clientId" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CertificateType" ColumnName="CertificateType" />
+                <ScalarProperty Name="CertificateFor" ColumnName="CertificateFor" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fr_casestage">
+            <EntityTypeMapping TypeName="ecomSchoolModel.fr_casestage">
+              <MappingFragment StoreEntitySet="fr_casestage">
+                <ScalarProperty Name="clientID" ColumnName="clientID" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="Stages" ColumnName="Stages" />
+                <ScalarProperty Name="Stagetype" ColumnName="Stagetype" />
+                <ScalarProperty Name="Caseuser" ColumnName="Caseuser" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hdr_Ac_Book">
+            <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_Book">
+              <MappingFragment StoreEntitySet="hdr_Ac_Book">
+                <ScalarProperty Name="clientId" ColumnName="clientId" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="seriesname" ColumnName="seriesname" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="edition" ColumnName="edition" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="barcode" ColumnName="barcode" />
+                <ScalarProperty Name="publisher" ColumnName="publisher" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="tag" ColumnName="tag" />
+                <ScalarProperty Name="bookname" ColumnName="bookname" />
+                <ScalarProperty Name="subtype" ColumnName="subtype" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="course" ColumnName="course" />
+                <ScalarProperty Name="bookno" ColumnName="bookno" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

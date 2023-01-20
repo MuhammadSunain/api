@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ecomSchoolModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Caste">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Caste" Type="nvarchar(max)" />
+    <Property Name="description" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+    <Property Name="Code" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Cities">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="City" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+    <Property Name="Country" Type="nvarchar(max)" />
+    <Property Name="State" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Countries">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="Country" Type="nvarchar(max)" />
+    <Property Name="isocode" Type="nvarchar(max)" />
+    <Property Name="DialCode" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+  </EntityType>
+  <EntityType Name="Entity">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="EntityName" Type="nvarchar(max)" />
+    <Property Name="EntityDate" Type="date" />
+    <Property Name="EntityType" Type="nvarchar(max)" />
+    <Property Name="ownerName" Type="nvarchar(max)" />
+    <Property Name="contsctno" Type="nvarchar" MaxLength="13" />
+    <Property Name="email" Type="nvarchar(max)" />
+    <Property Name="address" Type="nvarchar(max)" />
+    <Property Name="clientid" Type="int" />
+  </EntityType>
+  <EntityType Name="entity_Type">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="Type" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="clientid" Type="int" />
+  </EntityType>
+  <EntityType Name="fr_CaseGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="CaseGroup" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+    <Property Name="clientId" Type="int" />
+  </EntityType>
+  <EntityType Name="fr_CASERULES">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="CaseGroup" Type="nvarchar(max)" />
+    <Property Name="CaseType" Type="nvarchar(max)" />
+    <Property Name="CaseRule" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="AssignTo" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+    <Property Name="clientId" Type="int" />
+  </EntityType>
+  <EntityType Name="fr_casestage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar(max)" />
+    <Property Name="Caseuser" Type="varchar(max)" />
+    <Property Name="Stagetype" Type="varchar(max)" />
+    <Property Name="Stages" Type="varchar(max)" />
+    <Property Name="description" Type="varchar(max)" />
+    <Property Name="entityId" Type="int" />
+    <Property Name="clientID" Type="int" />
+  </EntityType>
+  <EntityType Name="fr_CaseType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="CaseGroup" Type="nvarchar(max)" />
+    <Property Name="CaseType" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+    <Property Name="clientId" Type="int" />
+    <Property Name="CaseFor" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="fr_certificateType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="CertificateFor" Type="nvarchar(max)" />
+    <Property Name="CertificateType" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+    <Property Name="clientId" Type="int" />
+  </EntityType>
+  <EntityType Name="fr_Purpose">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="Purpose" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+    <Property Name="clientId" Type="int" />
+  </EntityType>
+  <EntityType Name="fr_Source">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="Source" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+    <Property Name="clientId" Type="int" />
+  </EntityType>
+  <EntityType Name="hdr_Ac_Book">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bookno" Type="nvarchar(max)" />
+    <Property Name="course" Type="nvarchar(max)" />
+    <Property Name="Subject" Type="nvarchar(max)" />
+    <Property Name="subtype" Type="nvarchar(max)" />
+    <Property Name="bookname" Type="nvarchar(max)" />
+    <Property Name="tag" Type="nvarchar(max)" />
+    <Property Name="author" Type="nvarchar(max)" />
+    <Property Name="publisher" Type="nvarchar(max)" />
+    <Property Name="barcode" Type="nvarchar(max)" />
+    <Property Name="price" Type="nvarchar(max)" />
+    <Property Name="edition" Type="nvarchar(max)" />
+    <Property Name="year" Type="nvarchar(max)" />
+    <Property Name="seriesname" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+    <Property Name="clientId" Type="int" />
+  </EntityType>
+  <EntityType Name="hdr_Ac_bookAuthor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="AuthorType" Type="nvarchar(max)" />
+    <Property Name="NickName" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Country" Type="nvarchar(max)" />
+    <Property Name="YearBorn" Type="nvarchar(max)" />
+    <Property Name="YearDied" Type="nvarchar(max)" />
+    <Property Name="Awards" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="hdr_Ac_bookCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="BookCategory" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+  </EntityType>
+  <EntityType Name="hdr_Ac_bookPublisher">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="Publisher" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Country" Type="nvarchar(max)" />
+    <Property Name="PhoneNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="WebUrl" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+  </EntityType>
+  <EntityType Name="hdr_Ac_bookType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="BookType" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+  </EntityType>
+  <EntityType Name="hdr_Ac_Course">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="CourseCategory" Type="nvarchar(max)" />
+    <Property Name="Course" Type="nvarchar(max)" />
+    <Property Name="Syllabus" Type="nvarchar(max)" />
+    <Property Name="AgeFrom" Type="int" />
+    <Property Name="AgeTill" Type="int" />
+    <Property Name="entityId" Type="int" />
+  </EntityType>
+  <EntityType Name="hdr_Ac_Section">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="Section" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+  </EntityType>
+  <EntityType Name="hdr_Ac_Section_group">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="SectionGroup" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+    <Property Name="Sections" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="hdr_AC_Subject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="entityId" Type="int" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="SubjectType" Type="nvarchar(max)" />
+    <Property Name="Course" Type="nvarchar(max)" />
+    <Property Name="Language" Type="nvarchar(max)" />
+    <Property Name="PeriodsPerWeek" Type="nvarchar" MaxLength="5" />
+    <Property Name="SubjectName" Type="nvarchar(max)" />
+    <Property Name="SubjectCategory" Type="nvarchar(max)" />
+    <Property Name="SubjectClass" Type="nvarchar(max)" />
+    <Property Name="Compulsory" Type="nvarchar" MaxLength="10" />
+    <Property Name="Syllabus" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="hdr_Ac_subjectType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="SubjectType" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+  </EntityType>
+  <EntityType Name="hdr_Ac_Syllabus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="Syllabus" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+  </EntityType>
+  <EntityType Name="hdr_HR_EmployeeProfile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="empid" Type="int" />
+    <Property Name="shrotcode" Type="nvarchar" MaxLength="25" />
+    <Property Name="machinecode" Type="nvarchar" MaxLength="25" />
+    <Property Name="joindate" Type="nvarchar(max)" />
+    <Property Name="firstname" Type="nvarchar(max)" />
+    <Property Name="lastname" Type="nvarchar(max)" />
+    <Property Name="dateofbirth" Type="nvarchar(max)" />
+    <Property Name="Gender" Type="nvarchar(max)" />
+    <Property Name="bloodgroup" Type="nvarchar(max)" />
+    <Property Name="CNIC" Type="nvarchar(max)" />
+    <Property Name="birthcountry" Type="nvarchar(max)" />
+    <Property Name="birthcity" Type="nvarchar(max)" />
+    <Property Name="nationality" Type="nvarchar(max)" />
+    <Property Name="religion" Type="nvarchar(max)" />
+    <Property Name="email" Type="nvarchar(max)" />
+    <Property Name="contactno" Type="nvarchar(max)" />
+    <Property Name="whatsappno" Type="nvarchar(max)" />
+    <Property Name="emptype" Type="nvarchar(max)" />
+    <Property Name="empcategory" Type="nvarchar(max)" />
+    <Property Name="empdepartment" Type="nvarchar(max)" />
+    <Property Name="empdestination" Type="nvarchar(max)" />
+    <Property Name="site" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+    <Property Name="clientId" Type="int" />
+  </EntityType>
+  <EntityType Name="hdr_Sm_studentinfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentID" Type="nvarchar" MaxLength="10" />
+    <Property Name="grno" Type="nvarchar(max)" />
+    <Property Name="StudentCategory" Type="nvarchar(max)" />
+    <Property Name="FullName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="DateofBirth" Type="date" />
+    <Property Name="CNIC" Type="nvarchar(max)" />
+    <Property Name="Nationality" Type="nvarchar(max)" />
+    <Property Name="gender" Type="nvarchar" MaxLength="8" />
+    <Property Name="Religon" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Country" Type="nvarchar(max)" />
+    <Property Name="State" Type="nvarchar(max)" />
+    <Property Name="City" Type="nvarchar(max)" />
+    <Property Name="Phoneno" Type="nvarchar" MaxLength="13" />
+    <Property Name="mobileno" Type="nvarchar" MaxLength="13" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="joingdate" Type="date" />
+    <Property Name="admissiondate" Type="date" />
+    <Property Name="syllabus" Type="nvarchar(max)" />
+    <Property Name="Course" Type="nvarchar(max)" />
+    <Property Name="Section" Type="nvarchar(max)" />
+    <Property Name="Sectiongroup" Type="nvarchar(max)" />
+    <Property Name="fatherName" Type="nvarchar(max)" />
+    <Property Name="fatherincome" Type="nvarchar(max)" />
+    <Property Name="Contactno" Type="nvarchar" MaxLength="13" />
+    <Property Name="fathercnic" Type="nvarchar(max)" />
+    <Property Name="whatsappno" Type="nvarchar(max)" />
+    <Property Name="fatheremail" Type="nvarchar(max)" />
+    <Property Name="fatheraddress" Type="nvarchar(max)" />
+    <Property Name="fathercountry" Type="nvarchar(max)" />
+    <Property Name="fatherstate" Type="nvarchar(max)" />
+    <Property Name="fathercity" Type="nvarchar(max)" />
+    <Property Name="mothername" Type="nvarchar(max)" />
+    <Property Name="mothercnic" Type="nvarchar(max)" />
+    <Property Name="mothercontactno" Type="nvarchar" MaxLength="13" />
+    <Property Name="motherwhatsapp" Type="nvarchar(max)" />
+    <Property Name="motheremail" Type="nvarchar(max)" />
+    <Property Name="motheraddres" Type="nvarchar(max)" />
+    <Property Name="mothercountry" Type="nvarchar(max)" />
+    <Property Name="motherstate" Type="nvarchar(max)" />
+    <Property Name="mothercity" Type="nvarchar(max)" />
+    <Property Name="emergencyrelagion" Type="nvarchar(max)" />
+    <Property Name="emergencypersonname" Type="nvarchar(max)" />
+    <Property Name="emergencycnic" Type="nvarchar(max)" />
+    <Property Name="emergencycontactno" Type="nvarchar" MaxLength="13" />
+    <Property Name="entityId" Type="int" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="Role" Type="nvarchar(max)" />
+    <Property Name="client" Type="int" />
+    <Property Name="entityId" Type="int" />
+  </EntityType>
+  <EntityType Name="Sms_Qualification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="qualificationtypeid" Type="nvarchar(max)" />
+    <Property Name="qualification" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="entityid" Type="int" />
+  </EntityType>
+  <EntityType Name="SMS_QualificationType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="QualificationType" Type="nvarchar(max)" />
+    <Property Name="Dexcription" Type="nvarchar(max)" />
+    <Property Name="entityid" Type="int" />
+  </EntityType>
+  <EntityType Name="sms_Religion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="Religion" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="entityid" Type="int" />
+  </EntityType>
+  <EntityType Name="States">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="State" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+    <Property Name="Country" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="student_category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="studentcategory" Type="nvarchar(max)" />
+    <Property Name="description" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+  </EntityType>
+  <EntityType Name="ut_clients">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="client" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ut_user_auth">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Entity" Type="nvarchar(max)" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="Fullname" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="CellNo" Type="nvarchar(max)" />
+    <Property Name="UserCategory" Type="nvarchar(max)" />
+    <Property Name="Role" Type="nvarchar(max)" />
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="entityId" Type="int" />
+    <Property Name="clientid" Type="int" />
+    <Property Name="entitiesname" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="ecomSchoolModelStoreContainer">
+    <EntitySet Name="Caste" EntityType="Self.Caste" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cities" EntityType="Self.Cities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Countries" EntityType="Self.Countries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Entity" EntityType="Self.Entity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="entity_Type" EntityType="Self.entity_Type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fr_CaseGroup" EntityType="Self.fr_CaseGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fr_CASERULES" EntityType="Self.fr_CASERULES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fr_casestage" EntityType="Self.fr_casestage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fr_CaseType" EntityType="Self.fr_CaseType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fr_certificateType" EntityType="Self.fr_certificateType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fr_Purpose" EntityType="Self.fr_Purpose" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fr_Source" EntityType="Self.fr_Source" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hdr_Ac_Book" EntityType="Self.hdr_Ac_Book" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hdr_Ac_bookAuthor" EntityType="Self.hdr_Ac_bookAuthor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hdr_Ac_bookCategory" EntityType="Self.hdr_Ac_bookCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hdr_Ac_bookPublisher" EntityType="Self.hdr_Ac_bookPublisher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hdr_Ac_bookType" EntityType="Self.hdr_Ac_bookType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hdr_Ac_Course" EntityType="Self.hdr_Ac_Course" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hdr_Ac_Section" EntityType="Self.hdr_Ac_Section" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hdr_Ac_Section_group" EntityType="Self.hdr_Ac_Section_group" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hdr_AC_Subject" EntityType="Self.hdr_AC_Subject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hdr_Ac_subjectType" EntityType="Self.hdr_Ac_subjectType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hdr_Ac_Syllabus" EntityType="Self.hdr_Ac_Syllabus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hdr_HR_EmployeeProfile" EntityType="Self.hdr_HR_EmployeeProfile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hdr_Sm_studentinfo" EntityType="Self.hdr_Sm_studentinfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sms_Qualification" EntityType="Self.Sms_Qualification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SMS_QualificationType" EntityType="Self.SMS_QualificationType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sms_Religion" EntityType="Self.sms_Religion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="States" EntityType="Self.States" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="student_category" EntityType="Self.student_category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ut_clients" EntityType="Self.ut_clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ut_user_auth" EntityType="Self.ut_user_auth" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

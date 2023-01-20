@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="206363732bb14207814583de3c42ab19" Name="Diagram1" ZoomLevel="25">
+        <EntityTypeShape EntityType="ecomSchoolModel.Caste" Width="1.5" PointX="0.75" PointY="14.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.City" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.Country" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.Entity" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.entity_Type" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.hdr_Ac_bookAuthor" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.hdr_Ac_bookCategory" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.hdr_Ac_bookPublisher" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.hdr_Ac_bookType" Width="1.5" PointX="6.75" PointY="7.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.hdr_Ac_Course" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.hdr_Ac_Section" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.hdr_Ac_Section_group" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.hdr_AC_Subject" Width="1.5" PointX="8.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.hdr_Ac_subjectType" Width="1.5" PointX="8.75" PointY="9.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.hdr_Ac_Syllabus" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.hdr_Sm_studentinfo" Width="1.5" PointX="10.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.Role" Width="1.5" PointX="4.75" PointY="10.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.SMS_QualificationType" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.sms_Religion" Width="1.5" PointX="12.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.State" Width="1.5" PointX="12.75" PointY="6.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.student_category" Width="1.5" PointX="6.75" PointY="12.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.ut_clients" Width="1.5" PointX="12.75" PointY="9.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.ut_user_auth" Width="1.5" PointX="12.75" PointY="12.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.Sms_Qualification" Width="1.5" PointX="0.75" PointY="11.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.hdr_HR_EmployeeProfile" Width="1.5" PointX="3.375" PointY="13.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.fr_CaseGroup" Width="1.5" PointX="9.375" PointY="14.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.fr_CaseType" Width="1.5" PointX="15.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.fr_Purpose" Width="1.5" PointX="15.375" PointY="4.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.fr_Source" Width="1.5" PointX="5.375" PointY="15.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.fr_CASERULES" Width="1.5" PointX="15.375" PointY="7.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.fr_certificateType" Width="1.5" PointX="15.375" PointY="11.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.fr_casestage" Width="1.5" PointX="15.375" PointY="15.75" />
+        <EntityTypeShape EntityType="ecomSchoolModel.hdr_Ac_Book" Width="1.5" PointX="17.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

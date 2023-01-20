@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ecomSchoolModelStoreContainer" CdmEntityContainer="ecomSchoolEntities">
+    <EntitySetMapping Name="Castes">
+      <EntityTypeMapping TypeName="ecomSchoolModel.Caste">
+        <MappingFragment StoreEntitySet="Caste">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="Caste1" ColumnName="Caste" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="ecomSchoolModel.City">
+        <MappingFragment StoreEntitySet="Cities">
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="City1" ColumnName="City" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="ecomSchoolModel.Country">
+        <MappingFragment StoreEntitySet="Countries">
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DialCode" ColumnName="DialCode" />
+          <ScalarProperty Name="isocode" ColumnName="isocode" />
+          <ScalarProperty Name="Country1" ColumnName="Country" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Entities">
+      <EntityTypeMapping TypeName="ecomSchoolModel.Entity">
+        <MappingFragment StoreEntitySet="Entity">
+          <ScalarProperty Name="clientid" ColumnName="clientid" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="contsctno" ColumnName="contsctno" />
+          <ScalarProperty Name="ownerName" ColumnName="ownerName" />
+          <ScalarProperty Name="EntityType" ColumnName="EntityType" />
+          <ScalarProperty Name="EntityDate" ColumnName="EntityDate" />
+          <ScalarProperty Name="EntityName" ColumnName="EntityName" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="entity_Type">
+      <EntityTypeMapping TypeName="ecomSchoolModel.entity_Type">
+        <MappingFragment StoreEntitySet="entity_Type">
+          <ScalarProperty Name="clientid" ColumnName="clientid" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hdr_Ac_bookAuthor">
+      <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_bookAuthor">
+        <MappingFragment StoreEntitySet="hdr_Ac_bookAuthor">
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="Awards" ColumnName="Awards" />
+          <ScalarProperty Name="YearDied" ColumnName="YearDied" />
+          <ScalarProperty Name="YearBorn" ColumnName="YearBorn" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="AuthorType" ColumnName="AuthorType" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hdr_Ac_bookCategory">
+      <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_bookCategory">
+        <MappingFragment StoreEntitySet="hdr_Ac_bookCategory">
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="BookCategory" ColumnName="BookCategory" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hdr_Ac_bookPublisher">
+      <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_bookPublisher">
+        <MappingFragment StoreEntitySet="hdr_Ac_bookPublisher">
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="WebUrl" ColumnName="WebUrl" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Publisher" ColumnName="Publisher" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hdr_Ac_bookType">
+      <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_bookType">
+        <MappingFragment StoreEntitySet="hdr_Ac_bookType">
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="BookType" ColumnName="BookType" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hdr_Ac_Course">
+      <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_Course">
+        <MappingFragment StoreEntitySet="hdr_Ac_Course">
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="AgeTill" ColumnName="AgeTill" />
+          <ScalarProperty Name="AgeFrom" ColumnName="AgeFrom" />
+          <ScalarProperty Name="Syllabus" ColumnName="Syllabus" />
+          <ScalarProperty Name="Course" ColumnName="Course" />
+          <ScalarProperty Name="CourseCategory" ColumnName="CourseCategory" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hdr_Ac_Section">
+      <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_Section">
+        <MappingFragment StoreEntitySet="hdr_Ac_Section">
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hdr_Ac_Section_group">
+      <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_Section_group">
+        <MappingFragment StoreEntitySet="hdr_Ac_Section_group">
+          <ScalarProperty Name="Sections" ColumnName="Sections" />
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SectionGroup" ColumnName="SectionGroup" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hdr_AC_Subject">
+      <EntityTypeMapping TypeName="ecomSchoolModel.hdr_AC_Subject">
+        <MappingFragment StoreEntitySet="hdr_AC_Subject">
+          <ScalarProperty Name="Syllabus" ColumnName="Syllabus" />
+          <ScalarProperty Name="Compulsory" ColumnName="Compulsory" />
+          <ScalarProperty Name="SubjectClass" ColumnName="SubjectClass" />
+          <ScalarProperty Name="SubjectCategory" ColumnName="SubjectCategory" />
+          <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+          <ScalarProperty Name="PeriodsPerWeek" ColumnName="PeriodsPerWeek" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Course" ColumnName="Course" />
+          <ScalarProperty Name="SubjectType" ColumnName="SubjectType" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hdr_Ac_subjectType">
+      <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_subjectType">
+        <MappingFragment StoreEntitySet="hdr_Ac_subjectType">
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SubjectType" ColumnName="SubjectType" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hdr_Ac_Syllabus">
+      <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_Syllabus">
+        <MappingFragment StoreEntitySet="hdr_Ac_Syllabus">
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Syllabus" ColumnName="Syllabus" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hdr_Sm_studentinfo">
+      <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Sm_studentinfo">
+        <MappingFragment StoreEntitySet="hdr_Sm_studentinfo">
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="emergencycontactno" ColumnName="emergencycontactno" />
+          <ScalarProperty Name="emergencycnic" ColumnName="emergencycnic" />
+          <ScalarProperty Name="emergencypersonname" ColumnName="emergencypersonname" />
+          <ScalarProperty Name="emergencyrelagion" ColumnName="emergencyrelagion" />
+          <ScalarProperty Name="mothercity" ColumnName="mothercity" />
+          <ScalarProperty Name="motherstate" ColumnName="motherstate" />
+          <ScalarProperty Name="mothercountry" ColumnName="mothercountry" />
+          <ScalarProperty Name="motheraddres" ColumnName="motheraddres" />
+          <ScalarProperty Name="motheremail" ColumnName="motheremail" />
+          <ScalarProperty Name="motherwhatsapp" ColumnName="motherwhatsapp" />
+          <ScalarProperty Name="mothercontactno" ColumnName="mothercontactno" />
+          <ScalarProperty Name="mothercnic" ColumnName="mothercnic" />
+          <ScalarProperty Name="mothername" ColumnName="mothername" />
+          <ScalarProperty Name="fathercity" ColumnName="fathercity" />
+          <ScalarProperty Name="fatherstate" ColumnName="fatherstate" />
+          <ScalarProperty Name="fathercountry" ColumnName="fathercountry" />
+          <ScalarProperty Name="fatheraddress" ColumnName="fatheraddress" />
+          <ScalarProperty Name="fatheremail" ColumnName="fatheremail" />
+          <ScalarProperty Name="whatsappno" ColumnName="whatsappno" />
+          <ScalarProperty Name="fathercnic" ColumnName="fathercnic" />
+          <ScalarProperty Name="Contactno" ColumnName="Contactno" />
+          <ScalarProperty Name="fatherincome" ColumnName="fatherincome" />
+          <ScalarProperty Name="fatherName" ColumnName="fatherName" />
+          <ScalarProperty Name="Sectiongroup" ColumnName="Sectiongroup" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="Course" ColumnName="Course" />
+          <ScalarProperty Name="syllabus" ColumnName="syllabus" />
+          <ScalarProperty Name="admissiondate" ColumnName="admissiondate" />
+          <ScalarProperty Name="joingdate" ColumnName="joingdate" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+          <ScalarProperty Name="Phoneno" ColumnName="Phoneno" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Religon" ColumnName="Religon" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="CNIC" ColumnName="CNIC" />
+          <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="StudentCategory" ColumnName="StudentCategory" />
+          <ScalarProperty Name="grno" ColumnName="grno" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="ecomSchoolModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="client" ColumnName="client" />
+          <ScalarProperty Name="Role1" ColumnName="Role" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SMS_QualificationType">
+      <EntityTypeMapping TypeName="ecomSchoolModel.SMS_QualificationType">
+        <MappingFragment StoreEntitySet="SMS_QualificationType">
+          <ScalarProperty Name="entityid" ColumnName="entityid" />
+          <ScalarProperty Name="Dexcription" ColumnName="Dexcription" />
+          <ScalarProperty Name="QualificationType" ColumnName="QualificationType" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sms_Religion">
+      <EntityTypeMapping TypeName="ecomSchoolModel.sms_Religion">
+        <MappingFragment StoreEntitySet="sms_Religion">
+          <ScalarProperty Name="entityid" ColumnName="entityid" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="ecomSchoolModel.State">
+        <MappingFragment StoreEntitySet="States">
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="State1" ColumnName="State" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="student_category">
+      <EntityTypeMapping TypeName="ecomSchoolModel.student_category">
+        <MappingFragment StoreEntitySet="student_category">
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="studentcategory" ColumnName="studentcategory" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ut_clients">
+      <EntityTypeMapping TypeName="ecomSchoolModel.ut_clients">
+        <MappingFragment StoreEntitySet="ut_clients">
+          <ScalarProperty Name="client" ColumnName="client" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ut_user_auth">
+      <EntityTypeMapping TypeName="ecomSchoolModel.ut_user_auth">
+        <MappingFragment StoreEntitySet="ut_user_auth">
+          <ScalarProperty Name="entitiesname" ColumnName="entitiesname" />
+          <ScalarProperty Name="clientid" ColumnName="clientid" />
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="UserCategory" ColumnName="UserCategory" />
+          <ScalarProperty Name="CellNo" ColumnName="CellNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sms_Qualification">
+      <EntityTypeMapping TypeName="ecomSchoolModel.Sms_Qualification">
+        <MappingFragment StoreEntitySet="Sms_Qualification">
+          <ScalarProperty Name="entityid" ColumnName="entityid" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="qualification" ColumnName="qualification" />
+          <ScalarProperty Name="qualificationtypeid" ColumnName="qualificationtypeid" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hdr_HR_EmployeeProfile">
+      <EntityTypeMapping TypeName="ecomSchoolModel.hdr_HR_EmployeeProfile">
+        <MappingFragment StoreEntitySet="hdr_HR_EmployeeProfile">
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="site" ColumnName="site" />
+          <ScalarProperty Name="empdestination" ColumnName="empdestination" />
+          <ScalarProperty Name="empdepartment" ColumnName="empdepartment" />
+          <ScalarProperty Name="empcategory" ColumnName="empcategory" />
+          <ScalarProperty Name="emptype" ColumnName="emptype" />
+          <ScalarProperty Name="whatsappno" ColumnName="whatsappno" />
+          <ScalarProperty Name="contactno" ColumnName="contactno" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="religion" ColumnName="religion" />
+          <ScalarProperty Name="nationality" ColumnName="nationality" />
+          <ScalarProperty Name="birthcity" ColumnName="birthcity" />
+          <ScalarProperty Name="birthcountry" ColumnName="birthcountry" />
+          <ScalarProperty Name="CNIC" ColumnName="CNIC" />
+          <ScalarProperty Name="bloodgroup" ColumnName="bloodgroup" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="dateofbirth" ColumnName="dateofbirth" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="joindate" ColumnName="joindate" />
+          <ScalarProperty Name="machinecode" ColumnName="machinecode" />
+          <ScalarProperty Name="shrotcode" ColumnName="shrotcode" />
+          <ScalarProperty Name="empid" ColumnName="empid" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fr_CaseGroup">
+      <EntityTypeMapping TypeName="ecomSchoolModel.fr_CaseGroup">
+        <MappingFragment StoreEntitySet="fr_CaseGroup">
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CaseGroup" ColumnName="CaseGroup" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fr_CaseType">
+      <EntityTypeMapping TypeName="ecomSchoolModel.fr_CaseType">
+        <MappingFragment StoreEntitySet="fr_CaseType">
+          <ScalarProperty Name="CaseFor" ColumnName="CaseFor" />
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CaseType" ColumnName="CaseType" />
+          <ScalarProperty Name="CaseGroup" ColumnName="CaseGroup" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fr_Purpose">
+      <EntityTypeMapping TypeName="ecomSchoolModel.fr_Purpose">
+        <MappingFragment StoreEntitySet="fr_Purpose">
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fr_Source">
+      <EntityTypeMapping TypeName="ecomSchoolModel.fr_Source">
+        <MappingFragment StoreEntitySet="fr_Source">
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fr_CASERULES">
+      <EntityTypeMapping TypeName="ecomSchoolModel.fr_CASERULES">
+        <MappingFragment StoreEntitySet="fr_CASERULES">
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="AssignTo" ColumnName="AssignTo" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CaseRule" ColumnName="CaseRule" />
+          <ScalarProperty Name="CaseType" ColumnName="CaseType" />
+          <ScalarProperty Name="CaseGroup" ColumnName="CaseGroup" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fr_certificateType">
+      <EntityTypeMapping TypeName="ecomSchoolModel.fr_certificateType">
+        <MappingFragment StoreEntitySet="fr_certificateType">
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CertificateType" ColumnName="CertificateType" />
+          <ScalarProperty Name="CertificateFor" ColumnName="CertificateFor" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fr_casestage">
+      <EntityTypeMapping TypeName="ecomSchoolModel.fr_casestage">
+        <MappingFragment StoreEntitySet="fr_casestage">
+          <ScalarProperty Name="clientID" ColumnName="clientID" />
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="Stages" ColumnName="Stages" />
+          <ScalarProperty Name="Stagetype" ColumnName="Stagetype" />
+          <ScalarProperty Name="Caseuser" ColumnName="Caseuser" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hdr_Ac_Book">
+      <EntityTypeMapping TypeName="ecomSchoolModel.hdr_Ac_Book">
+        <MappingFragment StoreEntitySet="hdr_Ac_Book">
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="seriesname" ColumnName="seriesname" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="edition" ColumnName="edition" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="barcode" ColumnName="barcode" />
+          <ScalarProperty Name="publisher" ColumnName="publisher" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="bookname" ColumnName="bookname" />
+          <ScalarProperty Name="subtype" ColumnName="subtype" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="course" ColumnName="course" />
+          <ScalarProperty Name="bookno" ColumnName="bookno" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
